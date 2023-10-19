@@ -1,5 +1,5 @@
-import gitHubClient, { GitHubClient } from "../utils/graphQLClient";
-import { GitHubUserDetailsResponse } from "./models/response";
+import { GitHubClient } from "../utils/graphQLClient";
+import {GitHubResponse, GitHubUserDetailsResponse} from "./models/response";
 
 export class GitHubService {
 
@@ -8,7 +8,7 @@ export class GitHubService {
   }
 
   async fetchGitHubUserInformation(userId: string): Promise<GitHubUserDetailsResponse> {
-    const results = await this.gitHubClient.query(
+    const response: GitHubResponse = await this.gitHubClient.query(
       `query User {
         user(login: "${userId}") {
           name,
@@ -65,11 +65,10 @@ export class GitHubService {
       }
     `
     );
-    const response = await results.json();
     if (response) {
       console.log(`Returning response`);
       return response.data;
     }
-    throw new Error(`Response from GitHub API: ${JSON.stringify(results)}`);
+    throw new Error(`Response from GitHub API: ${JSON.stringify(response)}`);
   };
 }

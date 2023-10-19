@@ -1,3 +1,7 @@
+export interface GitHubResponse {
+  data: GitHubUserDetailsResponse
+}
+
 export interface GitHubUserDetailsResponse {
   user: GitHubUser;
 }

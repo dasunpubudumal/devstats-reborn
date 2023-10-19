@@ -58,7 +58,7 @@ describe("Check if information are fetched correctly", () => {
       const response: StackOverflowUser = await service.fetchStackOverflowUserInformation("123");
       expect(response).toHaveProperty('items');
     } catch (err) {
-      console.error(err);
+      fail();
     }
   });
 });
