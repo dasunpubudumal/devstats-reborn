@@ -122,7 +122,7 @@ const response = {
         }
     }
 };
-describe("", () => {
+describe("Check whether GitHub fetch is working correctly", () => {
 
     let clientMock: GitHubClient = mock(GitHubClient);
     let client: GitHubClient = instance(clientMock);
