@@ -22,5 +22,5 @@ jobs:
         run: |
           pwd
           ls -la
-          npm ci
-          npm run-script build:qa
+          npm i
+          npm test
