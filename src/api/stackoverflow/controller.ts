@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { StackOverflowService } from "./service";
-import { StackOverflowClient } from "../utils/stackOverflowClient";
+import { StackOverflowService } from "src/api/stackoverflow/service";
+import { StackOverflowClient } from "src/utils/stackOverflowClient";
 
 const stackOverflowService: StackOverflowService = new StackOverflowService(new StackOverflowClient());
 

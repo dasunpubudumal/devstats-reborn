@@ -1,4 +1,4 @@
-import {StackOverflowClient} from "../utils/stackOverflowClient";
+import {StackOverflowClient} from "../../utils/stackOverflowClient";
 import {StackOverflowUser} from "./models/response";
 
 export class StackOverflowService {

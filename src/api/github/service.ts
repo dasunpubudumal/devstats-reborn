@@ -1,4 +1,4 @@
-import { GitHubClient } from "../utils/graphQLClient";
+import { GitHubClient } from "../../utils/graphQLClient";
 import {GitHubResponse, GitHubUserDetailsResponse} from "./models/response";
 
 export class GitHubService {

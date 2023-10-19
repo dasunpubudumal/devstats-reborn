@@ -1,6 +1,6 @@
 import {describe, expect, test} from "@jest/globals";
 import {StackOverflowService} from "./service";
-import {StackOverflowClient} from "../utils/stackOverflowClient";
+import {StackOverflowClient} from "../../utils/stackOverflowClient";
 import {instance, mock, when} from "ts-mockito";
 import {StackOverflowUser} from "./models/response";
 import fetchMock from "jest-fetch-mock";

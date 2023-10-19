@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { GitHubUserDetailsResponse } from "../github/models/response";
-import { GitHubService } from "./service";
-import { GitHubClient } from "../utils/graphQLClient";
+import { GitHubUserDetailsResponse } from "src/api/github/models/response";
+import { GitHubService } from "src/api/github/service";
+import { GitHubClient } from "src/utils/graphQLClient";
 
 const gitHubService: GitHubService = new GitHubService(new GitHubClient());
 

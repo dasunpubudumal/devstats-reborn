@@ -1,6 +1,6 @@
 import express, { Application, Request, Response } from "express";
-import { loadInformation as github } from "./github/controller";
-import { loadInformation as stackoverflow } from "./stackoverflow/controller";
+import { loadInformation as github } from "./api/github/controller";
+import { loadInformation as stackoverflow } from "./api/stackoverflow/controller";
 
 const app: Application = express();
 

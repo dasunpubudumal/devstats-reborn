@@ -1,8 +1,7 @@
 import {describe, expect, test} from "@jest/globals";
-import {GitHubClient} from "../utils/graphQLClient";
+import {GitHubClient} from "../../utils/graphQLClient";
 import {anyString, instance, mock, when} from "ts-mockito";
-import {GitHubService} from "../github/service";
-import exp from "constants";
+import {GitHubService} from "./service";
 import {GitHubUserDetailsResponse} from "./models/response";
 
 const response = {

@@ -1,6 +1,6 @@
 import { GITHUB_GRAPHQL_ROOT } from "./constants";
 import * as dotenv from "dotenv";
-import {GitHubResponse} from "../github/models/response";
+import {GitHubResponse} from "../api/github/models/response";
 dotenv.config({ path: `.env` });
 
 export class GitHubClient {

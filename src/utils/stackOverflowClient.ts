@@ -1,5 +1,5 @@
 import {STACKOVERFLOW_ROOT} from "./constants";
-import {StackOverflowUser} from "../stackoverflow/models/response";
+import {StackOverflowUser} from "../api/stackoverflow/models/response";
 
 export class StackOverflowClient {
   async query(userId: string): Promise<StackOverflowUser> {
