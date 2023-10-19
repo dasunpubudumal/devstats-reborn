@@ -66,7 +66,6 @@ export class GitHubService {
     `
     );
     if (response) {
-      console.log(`Returning response`);
       return response.data;
     }
     throw new Error(`Response from GitHub API: ${JSON.stringify(response)}`);
