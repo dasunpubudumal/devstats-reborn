@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
-import { fetchStackOverflowUserInformation } from "./service";
-import { StackOverflowUser } from "./models/response";
+import { StackOverflowService } from "./service";
+import { StackOverflowClient } from "../utils/stackOverflowClient";
+
+const stackOverflowService: StackOverflowService = new StackOverflowService(new StackOverflowClient());
 
 /**
  * Handles /stackoverflow/user/:id endpoint that fetches information from StackExchange API
@@ -12,16 +14,12 @@ export const loadInformation = async (
   res: Response
 ): Promise<void> => {
   try {
-    const response: StackOverflowUser = await fetchStackOverflowUserInformation(
-      req.params.id
-    );
+    const response = stackOverflowService.fetchStackOverflowUserInformation(req.params.id);
     res.json(response);
-  } catch(err) {
-    res.json(
-      {
-        message: err,
-        status: 400
-      }
-    );
+  } catch (err) {
+    res.json({
+      message: err,
+      status: 400,
+    });
   }
 };

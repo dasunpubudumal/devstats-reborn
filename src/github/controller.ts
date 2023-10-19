@@ -1,6 +1,9 @@
 import { Request, Response } from "express";
-import { fetchGitHubUserInformation } from "./service";
 import { GitHubUserDetailsResponse } from "../github/models/response";
+import { GitHubService } from "./service";
+import { GitHubClient } from "../utils/graphQLClient";
+
+const gitHubService: GitHubService = new GitHubService(new GitHubClient());
 
 /**
  * Handles /github/user/:id endpoint that fetches information from GitHub
@@ -14,7 +17,7 @@ export const loadInformation = async (
   try {
     if (req.params.id) {
       const result: GitHubUserDetailsResponse =
-        await fetchGitHubUserInformation(req.params.id);
+        await gitHubService.fetchGitHubUserInformation(req.params.id);
       res.json({ ...result });
     }
   } catch (err: any) {
