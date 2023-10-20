@@ -10,7 +10,7 @@ export const HomePage: React.FC<HomePageProps> = ({ props }) => {
   return (
     <>
       <PageWrapper>
-        <Box p={10}>
+        <Box p={10} sx={{ "text-align": "justify" }}>
           <Heading>DevStats Profile Analyzer</Heading>
           <Box mt={5}>
             Nostrud exercitation est irure voluptate ipsum aliqua ullamco elit.

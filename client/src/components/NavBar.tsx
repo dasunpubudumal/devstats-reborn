@@ -8,7 +8,7 @@ import {
   Button,
   Stack,
 } from "@chakra-ui/react";
-import { FaFontAwesome, FaGithub, FaStackOverflow } from "react-icons/fa";
+import { FaGithub, FaStackOverflow } from "react-icons/fa";
 
 export const NavBar = () => {
   return (
@@ -19,6 +19,7 @@ export const NavBar = () => {
         minH={70}
         backdropFilter="blur(8px)"
         boxShadow="xs"
+        sx={{ position: "sticky", top: 0, background: "transparent" }}
       >
         <Flex alignItems="center" justifyContent={"space-between"} h={16}>
           <Box>
